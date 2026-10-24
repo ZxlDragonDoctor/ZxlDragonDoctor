@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&pause=1100&color=7C3AED&center=true&vCenter=true&width=800&height=70&lines=%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E8%80%85+%E2%88%9E+AI+%E6%9E%84%E5%BB%BA%E8%80%85;%E6%9E%84%E5%BB%BA%E7%9C%9F%E6%AD%A3%E6%9C%89%E4%BB%B7%E5%80%BC%E7%9A%84%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F" alt="Typing introduction" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&pause=1100&color=7C3AED&center=true&vCenter=true&width=800&height=70&lines=Full-Stack+Dev+%E2%88%9E+AI+Builder;Building+intelligent+systems+that+matter" alt="Typing introduction" />
   </a>
 </p>
 
