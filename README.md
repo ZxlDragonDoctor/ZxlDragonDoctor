@@ -33,18 +33,18 @@
 
 ## GitHub activity
 
-<table>
-  <tr>
-    <td width="42%" valign="top">
-      <img src="./profile/stats-dark.svg" alt="Profile Stats" width="100%" />
-      <br />
-      <img src="./profile/languages-dark.svg" alt="Top Languages" width="100%" />
-    </td>
-    <td width="58%" valign="top">
-      <img src="./profile/metrics.svg" alt="GitHub Metrics" width="100%" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile/stats-light.svg" />
+    <img height="190" src="./profile/stats-light.svg" alt="GitHub statistics" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/languages-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile/languages-light.svg" />
+    <img height="190" src="./profile/languages-light.svg" alt="Most used languages" />
+  </picture>
+</p>
 
 <p align="center">
   <picture>
