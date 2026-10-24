@@ -64,10 +64,13 @@ jobs:
           curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=github-compact&hide_border=true&area=true&color=7C3AED&line=a78bfa&point=333333&bg_color=ffffff&title_color=7C3AED&custom_title=Activity%20Graph" -o profile/activity-light.svg
 
       # --- GitHub Metrics (comprehensive panel) ---
+      # Optional: needs a METRICS_TOKEN secret with repo/read:user/read:org.
+      # continue-on-error so a missing PAT never blocks the other assets.
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest
+        continue-on-error: true
         with:
-          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }}
           output: profile/metrics.svg
           config_timezone: Asia/Shanghai
           plugin_languages: yes
@@ -77,25 +80,12 @@ jobs:
           plugin_languages_independent: no
           plugin_stars: yes
           plugin_stars_limit: 3
-          plugin_projects: yes
-          plugin_projects_limit: 3
           plugin_lines: yes
           plugin_followup: yes
           plugin_followup_sections: repositories
           plugin_contributions: yes
-          template: "repository"
           base: header, activity, community, repositories, metadata
           config_display: color
-          query: |
-            repository: {
-              owner(login: "${{ github.repository_owner }}") {
-                repositories(first: 100, orderBy: {field: STARGAZERS, direction: DESC}) {
-                  nodes {
-                    stargazerCount
-                  }
-                }
-              }
-            }
 
       # --- Contribution snake ---
       - name: Generate contribution snake
