@@ -47,11 +47,9 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/activity-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./profile/activity-light.svg" />
-    <img src="./profile/activity-light.svg" alt="GitHub Activity Graph" width="100%" />
-  </picture>
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com?user=ZxlDragonDoctor&theme=github-dark&hide_border=true&border_radius=6&stroke=30363d&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED&sideLabels=8b949e&dates=8b949e&sideNums=a78bfa&currStreakNum=a78bfa" alt="GitHub Streak" />
+  </a>
 </p>
 
 ## Contribution trail
