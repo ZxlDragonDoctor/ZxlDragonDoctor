@@ -54,15 +54,6 @@ jobs:
           path: profile/languages-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # --- Activity graph (31-day commit wave) ---
-      - name: Generate activity graph (dark)
-        run: |
-          curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=github&hide_border=true&area=true&color=7C3AED&line=a78bfa&point=ffffff&bg_color=0d1117&title_color=58A6FF&custom_title=Activity%20Graph" -o profile/activity-dark.svg
-
-      - name: Generate activity graph (light)
-        run: |
-          curl -s "https://github-readme-activity-graph.vercel.app/graph?username=${{ github.repository_owner }}&theme=github-compact&hide_border=true&area=true&color=7C3AED&line=a78bfa&point=333333&bg_color=ffffff&title_color=7C3AED&custom_title=Activity%20Graph" -o profile/activity-light.svg
-
       # --- GitHub Metrics (comprehensive panel) ---
       # Optional: needs a METRICS_TOKEN secret with repo/read:user/read:org.
       # continue-on-error so a missing PAT never blocks the other assets.
@@ -107,8 +98,6 @@ jobs:
             profile/stats-light.svg
             profile/languages-dark.svg
             profile/languages-light.svg
-            profile/activity-dark.svg
-            profile/activity-light.svg
           )
           for card in "${cards[@]}"; do
             valid=true
