@@ -54,6 +54,20 @@ jobs:
           path: profile/languages-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      # --- Streak Stats card (fetched server-side so GitHub serves a static file,
+      #     avoiding flaky live demolab fetches through camo) ---
+      - name: Generate streak stats (dark)
+        run: |
+          curl -fsS --retry 3 --retry-delay 5 --max-time 60 \
+            "https://streak-stats.demolab.com?user=${{ github.repository_owner }}&theme=github-dark&hide_border=true&border_radius=6&stroke=30363d&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED&sideLabels=8b949e&dates=8b949e&sideNums=a78bfa&currStreakNum=a78bfa" \
+            -o profile/streak-dark.svg
+
+      - name: Generate streak stats (light)
+        run: |
+          curl -fsS --retry 3 --retry-delay 5 --max-time 60 \
+            "https://streak-stats.demolab.com?user=${{ github.repository_owner }}&theme=default&hide_border=true&border_radius=6&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED&sideNums=7C3AED" \
+            -o profile/streak-light.svg
+
       # --- GitHub Metrics (comprehensive panel) ---
       # Optional: needs a METRICS_TOKEN secret with repo/read:user/read:org.
       # continue-on-error so a missing PAT never blocks the other assets.
@@ -98,6 +112,8 @@ jobs:
             profile/stats-light.svg
             profile/languages-dark.svg
             profile/languages-light.svg
+            profile/streak-dark.svg
+            profile/streak-light.svg
           )
           for card in "${cards[@]}"; do
             valid=true
