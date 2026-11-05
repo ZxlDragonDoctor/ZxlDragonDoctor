@@ -47,9 +47,11 @@
 </p>
 
 <p align="center">
-  <a href="https://git.io/streak-stats">
-    <img src="https://streak-stats.demolab.com?user=ZxlDragonDoctor&theme=github-dark&hide_border=true&border_radius=6&stroke=30363d&ring=7C3AED&fire=7C3AED&currStreakLabel=7C3AED&sideLabels=8b949e&dates=8b949e&sideNums=a78bfa&currStreakNum=a78bfa" alt="GitHub Streak" />
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/streak-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile/streak-light.svg" />
+    <img src="./profile/streak-light.svg" alt="GitHub Streak" />
+  </picture>
 </p>
 
 ## Contribution trail
