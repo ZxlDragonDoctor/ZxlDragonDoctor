@@ -2,7 +2,7 @@ name: Refresh profile assets
 
 on:
   schedule:
-    - cron: "17 2 * * *"
+    - cron: "17 */6 * * *"   # refresh every 6 hours
   workflow_dispatch:
 
 permissions:
